@@ -39,6 +39,17 @@
       "gpt-4o-mini-realtime-preview-2024-12-17"
       
     ],
+    "limited_models":[
+      "nano",
+      "haiku"
+    ],
+     "middleground_models":[
+      "mini",
+      "sonnet"
+    ],
+     "large_models":[
+      
+    ],
     "excluded_keywords": [
       "embedding",
       "chat",
