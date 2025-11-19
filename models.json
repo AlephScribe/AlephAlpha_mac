@@ -4,7 +4,8 @@
   "update_message": "Added Chatgpt 5 models",
   "model_filter": {
     "included_models": [
-      
+      "gpt-5.1",
+      "gpt-5.1-mini",
     ],
     "model_comments": {
       "gpt-4.1": "Most advanced OpenAI model for complex document analysis and detailed data extraction",
@@ -37,7 +38,6 @@
       "claude-instant-1",
       "claude-2",
       "gpt-4o-mini-realtime-preview-2024-12-17"
-      
     ],
     "limited_models":[
       "nano",
@@ -107,7 +107,8 @@
       "openai",
       "anthropic",
       "mistral",
-      "groq"
+      "groq",
+      "google"
     ],
     "provider_mappings": {
       "openai": "openai",
