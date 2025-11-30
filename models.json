@@ -1,6 +1,7 @@
 {
   "version": "2.0",
   "last_updated": "2025-06-18T23:15:00Z",
+  "super_mode": "True"",
   "update_message": "Added Chatgpt 5 models",
   "model_filter": {
     "included_models": [
@@ -132,7 +133,6 @@
     "vision-support-required": "True",
     "limited_model_effective_limit": 64000,
     "middleground_model_effective_limit": 128000,
-    "comment_version":"Added new OpenAI models: GPT 5, GPT 5 mini and GPT 5-nano",
-    "super_mode": "True"
+    "comment_version":"Added new OpenAI models: GPT 5, GPT 5 mini and GPT 5-nano"
   }
 }
