@@ -132,6 +132,7 @@
     "vision-support-required": "True",
     "limited_model_effective_limit": 64000,
     "middleground_model_effective_limit": 128000,
-    "comment_version":"Added new OpenAI models: GPT 5, GPT 5 mini and GPT 5-nano"
+    "comment_version":"Added new OpenAI models: GPT 5, GPT 5 mini and GPT 5-nano",
+    "super_mode": "True"
   }
 }
