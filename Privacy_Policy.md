@@ -1,5 +1,5 @@
 # KurKuma Privacy Policy
-**Last Updated:** September 28, 2025
+**Last Updated:** December 7, 2025
 
 This Privacy Policy describes how KurKuma ("we," "us," or "our") handles information when you use our macOS application. Your privacy and the security of your data are critically important to us.
 
