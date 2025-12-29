@@ -2,7 +2,7 @@
   "version": "2.0",
   "last_updated": "2025-06-18T23:15:00Z",
   "super_mode": "BXSApVTABw2g",
-  "update_message": "Added Chatgpt 5 models",
+  "update_message": "Added Chatgpt 5 models and provider documentation URLs",
   "model_filter": {
     "included_models": [
       "gpt-5.1",
@@ -44,11 +44,11 @@
       "nano",
       "haiku"
     ],
-     "middleground_models":[
+    "middleground_models":[
       "mini",
       "sonnet"
     ],
-     "large_models":[
+    "large_models":[
       
     ],
     "excluded_keywords": [
@@ -126,13 +126,40 @@
       "palm": "google",
       "claude": "anthropic",
       "meta": "meta",
-      "google": "google"
+      "google": "google",
+      "gemini": "google",
+      "vertex_ai": "google",
+      "vertex_ai-language-models": "google"
+    },
+    "provider_docs": {
+      "openai": "https://platform.openai.com/api-keys",
+      "anthropic": "https://console.anthropic.com/settings/keys",
+      "google": "https://ai.google.dev/",
+      "vertex_ai": "https://cloud.google.com/vertex-ai/generative-ai/docs/start/api-keys",
+      "gemini": "https://ai.google.dev/",
+      "cohere": "https://dashboard.cohere.com/api-keys",
+      "mistral": "https://console.mistral.ai/api-keys/",
+      "groq": "https://console.groq.com/keys",
+      "together_ai": "https://api.together.xyz/settings/api-keys",
+      "replicate": "https://replicate.com/account/api-tokens",
+      "huggingface": "https://huggingface.co/settings/tokens",
+      "xai": "https://console.x.ai/",
+      "perplexity": "https://www.perplexity.ai/settings/api",
+      "deepseek": "https://platform.deepseek.com/api_keys",
+      "nvidia_nim": "https://build.nvidia.com/explore/discover",
+      "azure": "https://portal.azure.com/",
+      "bedrock": "https://console.aws.amazon.com/bedrock/",
+      "fireworks_ai": "https://fireworks.ai/api-keys",
+      "anyscale": "https://app.endpoints.anyscale.com/",
+      "voyage": "https://dash.voyageai.com/api-keys",
+      "ai21": "https://studio.ai21.com/account/api-key",
+      "aleph_alpha": "https://app.aleph-alpha.com/profile"
     },
     "max_input_cost_per_1k_tokens": 0.05,
     "min_max_tokens": 10000,
     "vision-support-required": "True",
     "limited_model_effective_limit": 64000,
     "middleground_model_effective_limit": 128000,
-    "comment_version":"Added new OpenAI models: GPT 5, GPT 5 mini and GPT 5-nano"
+    "comment_version":"Added new OpenAI models: GPT 5, GPT 5 mini and GPT 5-nano. Added provider_docs URLs and fixed Gemini provider mapping."
   }
 }
