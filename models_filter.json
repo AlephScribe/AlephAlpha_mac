@@ -2,76 +2,15 @@
   "version": "2.0",
   "last_updated": "2025-06-18T23:15:00Z",
   "super_mode": "BXSApVTABw2g",
-  "update_message": "Added Chatgpt 5 models and provider documentation URLs",
+  "update_message": "Added ChatGPT 5 models and provider documentation URLs. Removed hard-coded model restrictions for better flexibility.",
+  "description": "Dynamic model filter configuration for DataSpector/EagleEye. This file enables easy addition of new models and providers through online updates.",
   "model_filter": {
-    "included_models": [
-      "gpt-5.1",
-      "gpt-5.1-mini"
-    ],
-    "model_comments": {
-      "gpt-4.1": "Most advanced OpenAI model for complex document analysis and detailed data extraction",
-      "gpt-4.1-mini": "Excellent for complex documents to extract datapoints and tables",
-      "gpt-4.1-nano": "Perfect for small documents and simple datapoints with exact copy-paste accuracy",
-      "gpt-5": "Most advanced OpenAI model for complex document analysis and detailed data extraction",
-      "gpt-5-mini": "Excellent for complex documents to extract datapoints and tables",
-      "gpt-5-nano": "Perfect for small documents and simple datapoints with exact copy-paste accuracy",
-      "claude-opus-4-20250514": "Premium Anthropic model for highest quality extraction and analysis",
-      "gemini-2.5-pro": "Google's premium model for comprehensive document analysis",
-      "gemini-2.5-flash": "Fast Google model for quick document processing",
-      "gemini-2.0-pro": "Reliable Google model for structured data extraction",
-      "gemini-2.0-flash": "Efficient Google model for simple extraction tasks",
-      "gemma-3-27b-it": "Open-source option for basic document processing",
-      "llama-3.3-70b-instruct": "Meta's large model for detailed extraction work",
-      "llama-3.1-70b-versatile": "Versatile model for various document types",
-      "llama-3.1-8b-instant": "Quick processing for simple extraction needs",
-      "mixtral-8x7b-32768": "Large context model for processing long documents",
-      "mistral-small-3.2-24b-instruct-2506": "Efficient European model for standard extraction",
-      "mistral-large-latest": "Mistral's flagship model for complex extraction tasks",
-      "mistral-medium-3": "Balanced Mistral model for most use cases",
-      "mistral-small-3.1": "Cost-effective option for simple data extraction",
-      "mixtral-8x22b": "High-capacity model for demanding extraction workflows",
-      "codestral-latest": "Specialized for structured data and technical documents"
-    },
-    "excluded_models": [
-      "gpt-4-0613",
-      "gpt-4-vision-preview", 
-      "text-davinci-003",
-      "claude-instant-1",
-      "claude-2",
-      "gpt-4o-mini-realtime-preview-2024-12-17"
-    ],
-    "limited_models":[
-      "nano",
-      "haiku"
-    ],
-    "middleground_models":[
-      "mini",
-      "sonnet"
-    ],
-    "large_models":[
-      
-    ],
-    "excluded_keywords": [
-      "embedding",
-      "chat",
-      "2024",
-      "2027",
-      "2028",
-      "whisper",
-      "tts", 
-      "speech",
-      "audio",
-      "dall-e",
-      "moderation",
-      "ft:",
-      "fine-tune",
-      "vision",
-      "instruct-preview",
-      "0613",
-      "0314",
-      "pixtral",
-      "preview",
-      "Preview"
+    "preferred_providers": [
+      "openai",
+      "anthropic",
+      "mistral",
+      "groq",
+      "google"
     ],
     "excluded_providers": [
       "azure",
@@ -104,13 +43,98 @@
       "featherless_ai",
       "watsonx"
     ],
-    "preferred_providers": [
-      "openai",
-      "anthropic",
-      "mistral",
-      "groq",
-      "google"
+    "mode_filter": {
+      "required_modes": [
+        "chat",
+        "responses"
+      ]
+    },
+    "token_filter": {
+      "min_input_tokens": 32000,
+      "min_output_tokens": 4000
+    },
+    "cost_filter": {
+      "max_input_cost_per_million": 10.0,
+      "max_output_cost_per_million": 30.0
+    },
+    "vision_filter": {
+      "vision_required": false
+    },
+    "excluded_keywords": [
+      "embedding",
+      "2024",
+      "2027",
+      "2028",
+      "whisper",
+      "tts", 
+      "speech",
+      "audio",
+      "dall-e",
+      "moderation",
+      "ft:",
+      "fine-tune",
+      "vision",
+      "instruct-preview",
+      "0613",
+      "0314",
+      "pixtral",
+      "preview",
+      "Preview"
     ],
+    "model_descriptions": {
+      "gpt-4.1": "Most advanced OpenAI model for complex document analysis and detailed data extraction",
+      "gpt-4.1-mini": "Excellent for complex documents to extract datapoints and tables",
+      "gpt-4.1-nano": "Perfect for small documents and simple datapoints with exact copy-paste accuracy",
+      "gpt-5": "Most advanced OpenAI model for complex document analysis and detailed data extraction",
+      "gpt-5-mini": "Excellent for complex documents to extract datapoints and tables",
+      "gpt-5-nano": "Perfect for small documents and simple datapoints with exact copy-paste accuracy",
+      "gpt-5.1": "Latest OpenAI model with enhanced reasoning capabilities",
+      "gpt-5.1-mini": "Efficient GPT-5 variant for balanced performance",
+      "claude-opus-4-20250514": "Premium Anthropic model for highest quality extraction and analysis",
+      "gemini-2.5-pro": "Google's premium model for comprehensive document analysis",
+      "gemini-2.5-flash": "Fast Google model for quick document processing",
+      "gemini-2.0-pro": "Reliable Google model for structured data extraction",
+      "gemini-2.0-flash": "Efficient Google model for simple extraction tasks",
+      "gemma-3-27b-it": "Open-source option for basic document processing",
+      "llama-3.3-70b-instruct": "Meta's large model for detailed extraction work",
+      "llama-3.1-70b-versatile": "Versatile model for various document types",
+      "llama-3.1-8b-instant": "Quick processing for simple extraction needs",
+      "mixtral-8x7b-32768": "Large context model for processing long documents",
+      "mistral-small-3.2-24b-instruct-2506": "Efficient European model for standard extraction",
+      "mistral-large-latest": "Mistral's flagship model for complex extraction tasks",
+      "mistral-medium-3": "Balanced Mistral model for most use cases",
+      "mistral-small-3.1": "Cost-effective option for simple data extraction",
+      "mixtral-8x22b": "High-capacity model for demanding extraction workflows",
+      "codestral-latest": "Specialized for structured data and technical documents"
+    },
+    "model_tiers": {
+      "nano_models": {
+        "keywords": [
+          "nano"
+        ],
+        "effective_limit": 64000
+      },
+      "mini_models": {
+        "keywords": [
+          "mini",
+          "haiku"
+        ],
+        "effective_limit": 128000
+      },
+      "standard_models": {
+        "keywords": [
+          "sonnet"
+        ],
+        "effective_limit": 200000
+      },
+      "pro_models": {
+        "keywords": [
+          "opus",
+          "pro"
+        ],
+        "effective_limit": null
+      }
+    },
     "provider_mappings": {
       "openai": "openai",
       "anthropic": "anthropic",
@@ -154,12 +178,13 @@
       "voyage": "https://dash.voyageai.com/api-keys",
       "ai21": "https://studio.ai21.com/account/api-key",
       "aleph_alpha": "https://app.aleph-alpha.com/profile"
-    },
-    "max_input_cost_per_1k_tokens": 0.05,
-    "min_max_tokens": 10000,
-    "vision-support-required": "True",
-    "limited_model_effective_limit": 64000,
-    "middleground_model_effective_limit": 128000,
-    "comment_version":"Added new OpenAI models: GPT 5, GPT 5 mini and GPT 5-nano. Added provider_docs URLs and fixed Gemini provider mapping."
+    }
+  },
+  "notes": {
+    "purpose": "This configuration file controls which AI models are available in the application",
+    "flexibility": "All settings are read dynamically - you can add new providers, models, or change filters by updating this file online",
+    "provider_addition": "To add a new provider: (1) Add to preferred_providers list, (2) Add provider mapping if needed, (3) Add provider documentation URL",
+    "model_descriptions": "Custom descriptions are applied to matching models in the UI for better user guidance",
+    "filtering_logic": "Models are filtered by: provider -> mode -> tokens -> cost -> keywords. All filters can be adjusted dynamically."
   }
 }
