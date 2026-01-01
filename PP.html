@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - DataSpector</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+            margin-top: 2.5rem;
+            color: #0056b3;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            color: #2c3e50;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        .in-short {
+            background-color: #f8f9fa;
+            border-left: 5px solid #0056b3;
+            padding: 20px;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .important-box {
+            background-color: #fff4e5;
+            border: 1px solid #ffe2b3;
+            padding: 15px;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .important-box strong {
+            color: #856404;
+        }
+
+        ul, ol {
+            margin-bottom: 1.2rem;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DataSpector Privacy Policy</h1>
+        <p class="last-updated"><strong>Last Updated:</strong> December 29, 2025</p>
+    </header>
+
+    <p>This Privacy Policy describes how DataSpector ("we," "us," or "our") handles information when you use our macOS application. Your privacy and the security of your data are critically important to us.</p>
+
+    <div class="in-short">
+        <h2>In Short</h2>
+        <p>To perform its core function, DataSpector sends the content of your selected PDF documents directly from your computer to third-party AI services for processing. DataSpector operates without its own servers, meaning we never receive, see, or store your document content. The application acts as a secure bridge between your files and the AI model you select. Your personal API keys are stored securely on your computer in the macOS Keychain.</p>
+    </div>
+
+    <hr>
+
+    <section>
+        <h2>1. Data Processing and Third-Party Services</h2>
+        
+        <h3>a. PDF Document Content:</h3>
+        <p>The primary function of DataSpector is to extract data from PDF documents using Large Language Models (LLMs). To achieve this, the application reads the text content (such as paragraphs, tables, and lists) from the documents you select on your device. This content is then transmitted over the internet directly from the application to the third-party AI provider associated with the model you choose in the app's settings.</p>
+
+        <h3>b. Third-Party AI Providers:</h3>
+        <p>We integrate with various external AI providers to offer a wide range of data extraction capabilities. These providers may include but are not limited to:</p>
+        <ul>
+            <li>OpenAI</li>
+            <li>Google</li>
+            <li>Anthropic</li>
+            <li>Mistral AI</li>
+            <li>Other providers available through LiteLLM</li>
+        </ul>
+        <p>We do not control the data privacy practices of these third parties, as their services operate independently. Because DataSpector does not have a server, your data is never routed through or stored by us. We strongly advise you to review the privacy policies of the respective AI providers before processing documents containing sensitive information, as their data retention and usage policies are outside of our control.</p>
+
+        <h3>c. Redaction of Sensitive Information:</h3>
+        <p>DataSpector includes a feature that allows you to specify sensitive values (e.g., names, email addresses, or company-specific terms) to be removed from the raw text before it is sent to the third-party AI provider. This redaction occurs entirely on your device, providing you with an important layer of privacy control.</p>
+
+        <div class="important-box">
+            <p><strong>Important Limitation:</strong> This feature is highly effective but only applies to extracted plain text. If you use a vision-enabled AI model (one that can analyze images), any sensitive information contained visually within images, charts, or scanned portions of your PDF will not be redacted. This is because the text is part of the image's pixel data and cannot be removed by our text-based tool. For instance, if a scanned receipt image contains a credit card number, the redaction tool will not be able to remove it from the image data sent to a vision-enabled model.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Information We Collect</h2>
+
+        <h3>a. License Information:</h3>
+        <p>To activate and validate an DataSpector Pro license, we verify your license key with our payment processor, Gumroad. This is a standard procedure to prevent fraud and ensure that Pro features are unlocked for valid license holders. This process may involve sharing your license key with Gumroad to confirm its validity.</p>
+
+        <h3>b. Anonymous Analytics (Optional):</h3>
+        <p>We may collect anonymous and aggregated usage statistics to help us identify bugs, improve application performance, and understand which features are most used. This data is strictly non-personal and does not include any content from your documents. Examples of such data include app crash reports, the popularity of certain AI models, or how often a feature is used.</p>
+    </section>
+
+    <section>
+        <h2>3. Data Security</h2>
+
+        <h3>a. Secure Transmission:</h3>
+        <p>All data, including your document content, is transmitted to and from third-party AI services using encrypted HTTPS connections. This industry-standard protocol ensures that the data is scrambled and cannot be easily intercepted while in transit between your computer and the AI provider.</p>
+
+        <h3>b. Secure Storage of API Keys:</h3>
+        <p>Your personal API keys for third-party services are never transmitted to us or stored anywhere other than your own computer. They are stored securely in the macOS Keychain, the standard, encrypted storage system provided by Apple. This means only you and applications you explicitly authorize on your Mac can access them, providing a robust layer of protection against unauthorized use or theft.</p>
+    </section>
+
+    <section>
+        <h2>4. User Consent</h2>
+        <p>Before any data is sent to a third-party AI service for the first time, DataSpector will present you with a mandatory confirmation dialog. This dialog explains the data-sharing process and requires your explicit consent before you can proceed. This initial step is crucial for ensuring you are fully informed. By granting consent, you confirm that you have read our policies and agree to take responsibility for the documents you choose to process through third-party services.</p>
+    </section>
+
+    <section>
+        <h2>5. Your Rights</h2>
+        <p>DataSpector is designed to put you in full control of your data workflow. You have the right to choose which documents to process and which AI models to use. You can also manage, update, or remove your API keys at any time from within the application's settings. You always have the right to decline the initial consent, which will limit the app to its offline-only features.</p>
+    </section>
+
+    <section>
+        <h2>6. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our app or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the new policy within the application or on our website.</p>
+    </section>
+
+    <section>
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions or suggestions about our Privacy Policy, please do not hesitate to contact us through our official channels.</p>
+    </section>
+
+</body>
+</html>
